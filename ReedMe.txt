@@ -1,0 +1,42 @@
+Overview:
+This Unity project contains two primary scripts demonstrating scene management and data passing between scenes using a static variable. It simulates a basic multiplayer lobby system where a player enters their name in the lobby scene, then joins a room scene where that name is displayed.
+
+Scripts:
+1. LobbyScene.cs
+- Contains TMP_InputField for player name input.
+- Saves player name as a static string.
+- Loads the Room Scene upon successful name entry.
+
+2. RoomScene.cs
+- Displays the player name retrieved from the LobbyScene static variable.
+- Contains logic to spawn rotating cubes randomly within a specified range.
+- Includes a toggle button to switch microphone icons and simulate voice on/off.
+
+Setup Instructions:
+- Include TMPro package for input fields and UI text.
+- Assign UI components to public variables in Inspector (e.g., playerNameInput, playernameText, voiceButton).
+- Create scenes named exactly as "Lobby Scene" and "Room Scene" and add them to Build Settings.
+- Link cubePrefab and sprite assets for voice buttons in RoomScene.
+
+Key Features:
+- Static variable usage for transferring player data between scenes.
+- SceneManager for scene loading.
+- UI interaction with buttons and input fields.
+- Basic random positioning and rotation of game objects.
+- Debug logging for process verification.
+
+Usage:
+- Run the Lobby Scene.
+- Enter a player name in the input field.
+- Click Join Room to load Room Scene.
+- Player name will show on UI text.
+- Use Spawn Cube button to instantiate rotating cubes randomly.
+- Use Voice On/Off button to toggle voice status icon.
+
+Notes:
+- The playerName variable is static and accessible throughout scene transitions.
+- Ensure UI references are assigned properly in the Inspector to avoid null reference errors.
+
+Author:
+Created for demonstrating fundamental Unity scene and UI scripting techniques related to simple multiplayer lobby systems.
+Mahmoud Mohamed
