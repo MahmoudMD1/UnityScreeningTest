@@ -11,24 +11,32 @@ public class RoomScene : MonoBehaviour
     [SerializeField] private TextMeshProUGUI playernameText;
     [SerializeField] private Sprite voiceOn, voiceOff;
     [SerializeField] private Button voiceButton;
-    public UIController  uIController;
+    public LobbyScene lobbyScene;
     private bool voiceoff = true;
-    public float horizontalRange = 2f;    // Side to side random range
-    public float verticalRange = 1f;      // Up and down random range
+    public float horizontalRange = 2f;    
+    public float verticalRange = 1f, speed = 100;      
     private Vector3 spawnPos;
-
-    // Update is called once per frame
+    private void Start()
+    {
+        playernameText.text = lobbyScene.playerNameInput.text;
+        Debug.Log("lobbyScene.playerNameInput.text");
+        
+    }
     void Update()
     {
-        uIController.playerName.text = playernameText.text;
+        
+        
         Vector3 randomOffset = transform.right * Random.Range(-horizontalRange, horizontalRange) +
                                transform.up * Random.Range(-verticalRange, verticalRange);
-        spawnPos = transform.position + randomOffset;
+        spawnPos = Vector3.zero + randomOffset;
+        cubePrefab.transform.Rotate(Vector3.up * speed * Time.deltaTime);
     }
 
     public void SpwanCube()
     {
         Instantiate(cubePrefab, spawnPos, Quaternion.identity);
+        
+       
     }
     public void VoiceOnOff()
     {
@@ -46,4 +54,5 @@ public class RoomScene : MonoBehaviour
         }
 
     }
+   
 }

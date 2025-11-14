@@ -482,8 +482,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1330805633212123031}
-        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+      - m_Target: {fileID: 5018056264522839035}
+        m_TargetAssemblyTypeName: LobbyScene, Assembly-CSharp
         m_MethodName: JoinRoom
         m_Mode: 1
         m_Arguments:
@@ -797,9 +797,9 @@ GameObject:
   - component: {fileID: 1079587349235324580}
   - component: {fileID: 545721275611097703}
   - component: {fileID: 1059967988488219713}
-  - component: {fileID: 1330805633212123031}
+  - component: {fileID: 5018056264522839035}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Lobby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -884,12 +884,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
+  m_IgnoreReversedGraphics: 0
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1330805633212123031
+--- !u!114 &5018056264522839035
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -898,7 +898,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8999073219873832476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae86829ca087f464b9ecd9ec914546b1, type: 3}
+  m_Script: {fileID: 11500000, guid: b708a500c9826f9478c55259d6da615f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: {fileID: 2195691906403403069}
+  playerNameInput: {fileID: 2195691906403403069}
